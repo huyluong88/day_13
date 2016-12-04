@@ -1,0 +1,59 @@
+body {
+    background-image: url(http://backwallpapers.com/wp-content/uploads/2016/09/2016-Acura-NSX-Supercar-High-Definition-Images-1080p.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e5c9cf;
+    opacity: .6;
+    padding: 18px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    height: 20em;
+    width: 50%;
+    background-color: #4c1313;
+    border-radius: 20px;
+    border: solid #566377;
+    padding: 10px;
+    overflow: scroll;
+    border-radius: 20px;
+    box-shadow: 8px -12px 28px -14px #3d7c76;
+    opacity: .3;
+    float: right;
+    color: white;
+}
+
+input {
+    width: 10%;
+    height: 20px;
+    background-color: #98cff9;
+    border-radius: 7px;
+    border: solid #566377;
+    transition: width 0.4s ease-in-out;
+    box-shadow: 2px 2px 4px 2px #b0c9f2;
+}
+
+input:focus {
+    width: 40%;
+}
+
+.fun {
+    border-radius: 6px;
+    padding: 7px;
+    box-shadow: 2px 0px 4px 2px #b0c9f2;
+    background-color: #cc0c32;
+    opacity: 0.3;
+}

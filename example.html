@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <title>Form Demo</title>
+</head>
+
+<body>
+ <h1>Items</h1>
+ <ul id="allItems"></ul>
+ <form method="POST" action="http://tiy-orl-proxy.herokuapp.com/items">
+   <label>
+     <input name="item[name]">
+   </label>
+   <button>Click to send</button>
+ </form>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+ <script>
+   function addToList (item) {
+     var $li = $("<li>")
+     $li.append(item.name)
+     $("ul").append($li)
+   }
+   $.get("http://tiy-orl-proxy.herokuapp.com/items")
+    .then(function (response) {
+      var items = response.items
+      console.log(items)
+      items.forEach(addToList)
+    })
+   $("form").submit(function(event){
+     event.preventDefault()
+     var theName = $('input').val()
+     $.post("http://tiy-orl-proxy.herokuapp.com/items",
+     {item: { name: theName }})
+      .then(response => {
+        console.log(response)
+        $('input').val('')
+        addToList(response)
+      })
+   })
+ </script>
+</body>
+
+</html>

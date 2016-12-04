@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://use.fontawesome.com/38fa5742c7.js"></script>
+    <title>Acura NSX car talk</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+
+        <a href="#">Active NSX chats</a>
+        <a href="#">Related car talk</a>
+        <a href="#">Register</a>
+        <a href="#">Huy Luong</a>
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+Find me on Facebook</a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+Find me on Instagram</a>
+        <a href="#"><i class="fa fa-snapchat-square" aria-hidden="true"></i>
+Find me on Snapchat</a>
+
+
+    </nav>
+    <section id="out">
+        <div class="">
+
+        </div>
+    </section>
+
+    <form method="POST" action="http://tiy-orl-proxy.herokuapp.com/messages">
+        <input id="text" name="message[username]">
+    </form>
+    <input id="username" onkeyup='saveValue(this)' placeholder="username">
+    <button class="fun">Click to start chat</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
